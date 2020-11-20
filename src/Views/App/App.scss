@@ -1,0 +1,172 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.flexdemo {
+  display: flex;
+  flex-direction: row;
+  background-color: red;
+}
+
+.flexdemo span:nth-of-type(1) {
+  flex: 1;
+  background-color: #61dafb;
+}
+.flexdemo span:nth-of-type(2) {
+  flex: 2;
+  background-color: pink;
+}
+
+@media screen and (max-width: 320px) {
+  .flexdemo {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+  }
+
+  .flexdemo span:nth-of-type(1) {
+    flex: 1;
+    background-color: #61dafb;
+  }
+  .flexdemo span:nth-of-type(2) {
+    flex: 2;
+    background-color: pink;
+  }
+}
+
+.App-loading {
+  position: relative;
+  width: 8em;
+  height: 8em;
+  background: black;
+  border-radius: 50%;
+  box-shadow: inset 0.5em -0.5em crimson;
+  animation: spin 2s linear infinite;
+}
+.App-loading::before,
+.App-loading::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  box-shadow: inherit;
+
+  left: 0;
+  top: 0;
+}
+
+.App-loading::before {
+  filter: blur(5px);
+}
+
+.App-loading::after {
+  filter: blur(10px);
+}
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+// https://codepen.io/alphardex/pen/ExavZdV
+.shinchou-menu {
+  background-color:#ffffff;
+  text-align:left;
+  --highlight-text-color: #00ACF0;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+
+  li {
+    margin: 6px;
+
+    a {
+      position: relative;
+      display: inline-flex;
+      padding: 6px 2px 6px 2px;
+      color: black;
+      font-size: 1.6em;
+      font-weight: 700;
+      line-height: 1; // ensure span is a square
+      text-decoration: none;
+      overflow: hidden;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        background: black;
+      }
+
+      &:hover {
+        span {
+          color: white !important;
+          text-shadow: 0 0 10px var(--highlight-text-color);
+        }
+      }
+
+      span {
+        position: relative;
+        margin: 0 5px 0 4px;
+        transition: 0.3s;
+
+        &.highlight::before {
+          position: absolute;
+          content: '';
+          top: -3px;
+          left: -3px;
+          bottom: -3px;
+          right: -3px;
+          z-index: -1;
+          background: var(--highlight-text-color);
+        }
+
+        &:not(.highlight) {
+          color: var(--highlight-text-color);
+        }
+      }
+    }
+  }
+}

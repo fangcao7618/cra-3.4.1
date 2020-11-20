@@ -1,0 +1,66 @@
+body {
+  background-color: #ffffff;
+}
+.btn_margin {
+  margin-top: 24px;
+}
+.agreement_descri {
+  padding-left: 8px;
+}
+.formBox {
+  padding: 36px 47px 0 47px;
+}
+/* datePicker */
+.TdatePicker .am-picker-popup-title {
+  color: #a59f9f;
+}
+.am-list-item {
+  padding-left: 0;
+  min-height: auto;
+}
+.am-list-item .am-list-line {
+  padding-right: 0;
+}
+.am-list-item .am-list-line .am-list-content {
+  display: none;
+}
+.am-list-item .am-list-line .am-list-extra {
+  flex-basis: none;
+  line-height: normal;
+  flex: 1;
+  text-align: left;
+
+  font-family: PingFangSC-Regular;
+  font-size: 30px;
+  color: #b2b2b2;
+  letter-spacing: 0;
+}
+.am-list-item .am-list-line .am-list-arrow {
+  background-image: url("../images/date.png");
+}
+/* 给元素布局成一列 */
+.listRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.listRow .pretty {
+  flex: 1;
+  position: relative;
+}
+/* picker */
+.am-picker-popup-title {
+  color: #a59f9f;
+}
+.am-list-item.jiantou .am-list-line .am-list-arrow {
+  background-image: none;
+  width: 0px;
+  height: 0px;
+  border: 15px solid;
+  border-color: #9f9f9f transparent transparent transparent;
+  margin-top: 15px;
+}
+.am-list-item.jiantou {
+  height: 40px;
+}

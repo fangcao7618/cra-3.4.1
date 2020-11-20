@@ -1,0 +1,72 @@
+/* pages/error/error.wxss */
+
+.panfish {
+    position: relative;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transform: scale(0.5) translateY(-30%);
+}
+
+.panfish img {
+    position: absolute;
+    z-index: 2;
+    top: 5%;
+    display: block;
+}
+
+.panfish img:nth-of-type(1) {
+    width: 485px;
+    height: 308px;
+}
+
+.panfish img:nth-of-type(2) {
+    width: 131px;
+    height: 151.5px;
+    transform: translate(0, 122%);
+    animation: a 2s ease-in-out alternate infinite;
+}
+
+.panfish img:nth-of-type(3) {
+    width: 619px;
+    height: 167px;
+    transform: translate(0, 165.3%);
+    opacity: 0.7;
+}
+
+.panfish img:nth-of-type(4) {
+    width: 253px;
+    height: 85px;
+    transform: translate(0, 352%);
+    opacity: 0.4;
+}
+
+@keyframes a {
+    0% {
+        transform: translate(0, 120%);
+    }
+
+    100% {
+        transform: translate(0, 126%);
+    }
+}
+.back {
+    display: block;
+    width: 240px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #007fff;
+    color: #ffffff;
+    font-size: 28px;
+    outline: none;
+    transform: translate(0, 352%);
+    text-align: center;
+}
+.back:active {
+    outline: none;
+}

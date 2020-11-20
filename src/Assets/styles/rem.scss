@@ -1,0 +1,13 @@
+html{
+    font-size: 32px;
+}
+@media (min-device-width:375px){
+    html{
+        font-size: 37.5px;
+    }
+}
+@media (min-device-width:414px){
+    html{
+        font-size: 41.4px;
+    }
+}
